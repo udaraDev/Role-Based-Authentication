@@ -1,4 +1,4 @@
-package entity;
+package com.project.rolebasedauthentication.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

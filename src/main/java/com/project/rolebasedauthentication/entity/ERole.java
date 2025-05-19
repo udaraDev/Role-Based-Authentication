@@ -1,4 +1,4 @@
-package entity;
+package com.project.rolebasedauthentication.entity;
 
 public enum ERole {
     ROLE_USER,
