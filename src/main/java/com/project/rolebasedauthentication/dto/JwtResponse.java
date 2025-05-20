@@ -1,3 +1,8 @@
+package com.project.rolebasedauthentication.dto;
+
+import lombok.Data;
+import java.util.List;
+
 @Data
 public class JwtResponse {
     private String token;
