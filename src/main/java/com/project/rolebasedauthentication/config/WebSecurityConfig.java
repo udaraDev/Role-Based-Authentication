@@ -1,7 +1,5 @@
 package com.project.rolebasedauthentication.config;
 
-import com.project.rolebasedauthentication.security.jwt.AuthEntryPointJwt;
-import com.project.rolebasedauthentication.security.jwt.AuthTokenFilter;
 import com.project.rolebasedauthentication.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
