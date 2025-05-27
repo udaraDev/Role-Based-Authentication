@@ -3,9 +3,9 @@ package com.project.rolebasedauthentication.dtos;
 import lombok.Data;
 
 @Data
-public class RegisterUserDto {
+public class LoginUserDto {
     private String email;
     private String password;
-    private String fullName;
+
     //getters and setters
 }

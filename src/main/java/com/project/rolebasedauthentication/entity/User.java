@@ -20,12 +20,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 @Entity
-@Table(name = "users",
-       uniqueConstraints = {
-           @UniqueConstraint(columnNames = "username"),
-           @UniqueConstraint(columnNames = "email")
-       })
+@Table(name = "users")
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements UserDetails {
@@ -36,7 +33,7 @@ public class User implements UserDetails {
 
     @NotBlank
     @Size(max = 20)
-    private String username;
+    private String fullName;
 
     @NotBlank
     @Size(max = 50)
@@ -69,6 +66,7 @@ public class User implements UserDetails {
     public String getUsername() {
         return email;
     }
+
 
     @Override
     public boolean isAccountNonExpired() {
