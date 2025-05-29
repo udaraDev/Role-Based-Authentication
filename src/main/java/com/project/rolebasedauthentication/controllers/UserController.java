@@ -1,3 +1,4 @@
+
 package com.project.rolebasedauthentication.controllers;
 
 import com.project.rolebasedauthentication.entity.User;
@@ -24,15 +25,21 @@ public class UserController {
     public ResponseEntity<User> authenticatedUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        User currentUser = (User) authentication.getPrincipal();
+        if (authentication != null && authentication.isAuthenticated()) {
+            String email = authentication.getName();
+            User user = userService.findByEmail(email);
 
-        return ResponseEntity.ok(currentUser);
+            if (user != null) {
+                return ResponseEntity.ok(user);
+            }
+        }
+
+        return ResponseEntity.notFound().build();
     }
 
     @GetMapping("/")
     public ResponseEntity<List<User>> allUsers() {
-        List <User> users = userService.allUsers();
-
+        List<User> users = userService.allUsers();
         return ResponseEntity.ok(users);
     }
 }
