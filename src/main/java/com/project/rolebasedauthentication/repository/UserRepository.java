@@ -1,6 +1,6 @@
 package com.project.rolebasedauthentication.repository;
 
-import com.project.rolebasedauthentication.entity.User;
+import com.project.rolebasedauthentication.entities.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

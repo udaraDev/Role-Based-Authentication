@@ -3,7 +3,7 @@ package com.project.rolebasedauthentication.controllers;
 import com.project.rolebasedauthentication.dtos.LoginResponse;
 import com.project.rolebasedauthentication.dtos.LoginUserDto;
 import com.project.rolebasedauthentication.dtos.RegisterUserDto;
-import com.project.rolebasedauthentication.entity.User;
+import com.project.rolebasedauthentication.entities.User;
 import com.project.rolebasedauthentication.services.AuthenticationService;
 import com.project.rolebasedauthentication.services.JwtService;
 import org.slf4j.Logger;
